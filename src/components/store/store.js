@@ -1,2 +1,11 @@
-import { compose, configStore, applyMiddleware } from "redux";
-import logger from "react-logger";
+import { compose, createStore, applyMiddleware } from "redux";
+import logger from "redux-logger";
+
+// root-reducer
+import { rootReducer } from "./root-reducer";
+
+const middleWares = [logger];
+// eslint-disable-next-line
+const composeEnhancers = compose(applyMiddleware(...middleWares));
+
+export const store = createStore(rootReducer, undefined, composeEnhancers);
