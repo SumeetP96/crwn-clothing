@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import {
   addItemToCart,
-  deleteItemFromCart,
+  clearItemFromCart,
   removeItemFromCart,
 } from "../store/cart/cart.action";
 import { selectCartItems } from "../store/cart/cart.selector";
@@ -16,8 +16,8 @@ const CheckoutItem = ({ cartItem }) => {
   const addItemHandler = () => dispatch(addItemToCart(cartItems, cartItem));
   const removeItemHandler = () =>
     dispatch(removeItemFromCart(cartItems, cartItem));
-  const deleteItemHandler = () =>
-    dispatch(deleteItemFromCart(cartItems, cartItem));
+  const clearItemHandler = () =>
+    dispatch(clearItemFromCart(cartItems, cartItem));
 
   return (
     <div className="checkout-item-container">
@@ -39,7 +39,7 @@ const CheckoutItem = ({ cartItem }) => {
 
       <span className="price">{price}</span>
 
-      <div className="remove-button" onClick={deleteItemHandler}>
+      <div className="remove-button" onClick={clearItemHandler}>
         &#10005;
       </div>
     </div>
