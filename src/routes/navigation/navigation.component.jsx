@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { CartContext } from "../../context/cart.context";
-import { selectCurrentUser } from "../../components/store/";
+import { selectCurrentUser } from "../../components/store/user/user.selector";
 
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
