@@ -19,6 +19,7 @@ const Shop = () => {
       dispatch(setCategories(categoriesArray));
     };
     getCategoriesMap();
+    // eslint-disable-next-line
   }, []);
 
   return (
