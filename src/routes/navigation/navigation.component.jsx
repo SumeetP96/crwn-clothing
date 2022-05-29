@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { signOutUser } from "../../utils/firebase/firebase.utils";
-import { selectCurrentUser } from "../../components/store/user/user.selector";
-import { selectIsCartOpen } from "../../components/store/cart/cart.selector";
+import { selectCurrentUser } from "../../store/user/user.selector";
+import { selectIsCartOpen } from "../../store/cart/cart.selector";
 
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
